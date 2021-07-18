@@ -11,6 +11,11 @@ public class KiwiController {
     @Autowired
     private KiwiService kiwiService;
 
+    @GetMapping("/")
+    private String helloworld(){
+        return "My First Web App on Heroku";
+    }
+
     @GetMapping("/users")
     private List<User> getUsers(){
         return kiwiService.getUsers();
